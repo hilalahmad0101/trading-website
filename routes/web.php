@@ -1,6 +1,11 @@
 <?php
 
 use App\Http\Livewire\AboutUs;
+use App\Http\Livewire\Admin\Auth\Login as AuthLogin;
+use App\Http\Livewire\Admin\Blog\AddBlog;
+use App\Http\Livewire\Admin\Blog\Blog as BlogBlog;
+use App\Http\Livewire\Admin\Blog\UpdateBlog;
+use App\Http\Livewire\Admin\Dashboard as AdminDashboard;
 use App\Http\Livewire\Blog;
 use App\Http\Livewire\Contact;
 use App\Http\Livewire\Dashboard;
@@ -52,5 +57,21 @@ Route::middleware(['auth'])->group(function () {
         Route::get('/referral-bounes', RaferralBounes::class)->name('referral-bonus');
         Route::get('/profile', Profile::class)->name('profile');
     });
-   
+});
+
+
+
+// Admin routes
+
+
+Route::prefix('admin')->group(function(){
+    Route::get('/login',AuthLogin::class)->name('admin.login');
+});
+
+
+Route::prefix('admin')->group(function(){
+    Route::get('/dashboard',AdminDashboard::class)->name('admin.dashboard');
+    Route::get('/post',BlogBlog::class)->name('admin.dashboard');
+    Route::get('/add/post',AddBlog::class)->name('admin.add.blog');
+    Route::get('/update/post/{id}',UpdateBlog::class)->name('admin.update.blog');
 });

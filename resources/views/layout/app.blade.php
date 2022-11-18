@@ -9,43 +9,43 @@
 
     <meta name="description" content="Income Gap,  A Modern Investmet Platform">
     <meta name="keywords" content="Income Gap best Earning Platform">
-    <link rel="shortcut icon" href="{{ asset('img/favicon.png')}}" type="image/x-icon">
+    <link rel="shortcut icon" href="{{ asset('img/favicon.png') }}" type="image/x-icon">
 
-    <link rel="apple-touch-icon" href="{{ asset('img/logo.png')}}">
+    <link rel="apple-touch-icon" href="{{ asset('img/logo.png') }}">
     <title>Income Gap | {{ $title }}</title>
-    <link rel="icon" type="image/png" sizes="16x16" href="{{ asset('img/favicon.png')}}">
+    <link rel="icon" type="image/png" sizes="16x16" href="{{ asset('img/favicon.png') }}">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black">
     <meta name="apple-mobile-web-app-title" content="Income Gap | {{ $title }}">
 
     <meta itemprop="name" content="Income Gap | {{ $title }}">
     <meta itemprop="description" content="Income Gap,  A Modern Investmet Platform">
-    <meta itemprop="image" content="{{ asset('img/meta.png')}}">
+    <meta itemprop="image" content="{{ asset('img/meta.png') }}">
 
     <meta property="og:type" content="website">
     <meta property="og:title" content="*&quot;Income Gap&quot;*">
     <meta property="og:description" content="Income Gap best Earning Platform">
-    <meta property="og:image" content="{{ asset('img/meta.png')}}" />
+    <meta property="og:image" content="{{ asset('img/meta.png') }}" />
     <meta property="og:image:type" content="image/png" />
     <meta property="og:url" content="{{ $title }}">
 
     <meta name="twitter:card" content="summary_large_image">
 
-    <link rel="stylesheet" type="text/css" href="{{ asset('css/bootstrap.min.css')}}" />
+    <link rel="stylesheet" type="text/css" href="{{ asset('css/bootstrap.min.css') }}" />
 
 
-    <link rel="stylesheet" type="text/css" href="{{ asset('css/animate.css')}}">
-    <link rel="stylesheet" type="text/css" href="{{ asset('css/owl.carousel.min.css')}}">
-    <link rel="stylesheet" type="text/css" href="{{ asset('css/owl.theme.default.min.css')}}">
-    <link rel="stylesheet" type="text/css" href="{{ asset('css/aos.css')}}">
-    <link rel="stylesheet" type="text/css" href="{{ asset('css/radialprogress.css')}}">
-    <link rel="stylesheet" type="text/css" href="{{ asset('css/jquery-ui.css')}}">
-    <link rel="stylesheet" type="text/css" href="{{ asset('css//flags.css')}}" />
-    <link rel="stylesheet" type="text/css" href="{{ asset('css//style.css')}}">
+    <link rel="stylesheet" type="text/css" href="{{ asset('css/animate.css') }}">
+    <link rel="stylesheet" type="text/css" href="{{ asset('css/owl.carousel.min.css') }}">
+    <link rel="stylesheet" type="text/css" href="{{ asset('css/owl.theme.default.min.css') }}">
+    <link rel="stylesheet" type="text/css" href="{{ asset('css/aos.css') }}">
+    <link rel="stylesheet" type="text/css" href="{{ asset('css/radialprogress.css') }}">
+    <link rel="stylesheet" type="text/css" href="{{ asset('css/jquery-ui.css') }}">
+    <link rel="stylesheet" type="text/css" href="{{ asset('css//flags.css') }}" />
+    <link rel="stylesheet" type="text/css" href="{{ asset('css//style.css') }}">
     <script src="{{ asset('js/modernizr.custom.js') }}"></script>
     <link rel="stylesheet" type="text/css"
-    href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.css">
-@livewireStyles
+        href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.css">
+    @livewireStyles
 
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -62,49 +62,49 @@
             <a class="navbar-brand golden-text" href="{{ route('dashboard') }}">Income Gap</a>
             <ul class="pb-4">
                 <!-- list item -->
-                <li class="{{ Request::routeIs('dashboard') ? 'active':'' }}">
+                <li class="{{ Request::routeIs('dashboard') ? 'active' : '' }}">
                     <a href="{{ route('dashboard') }}" class="sidebar-link">
-                        <img src="{{ asset('img/layout.png')}}" alt="Dashboard" />Dashboard </a>
+                        <img src="{{ asset('img/layout.png') }}" alt="Dashboard" />Dashboard </a>
                 </li>
-                <li class="{{ Request::routeIs('invest-history') ? 'active':'' }}">
+                <li class="{{ Request::routeIs('invest-history') ? 'active' : '' }}">
                     <a href="{{ route('invest-history') }}" class="sidebar-link">
-                        <img src="{{ asset('img/growth-graph.png')}}" alt="invest history" />invest history </a>
+                        <img src="{{ asset('img/growth-graph.png') }}" alt="invest history" />invest history </a>
                 </li>
-                <li class="{{ Request::routeIs('add-fund') ? 'active':'' }}">
+                <li class="{{ Request::routeIs('add-fund') ? 'active' : '' }}">
                     <a href="{{ route('add-fund') }}" class="sidebar-link">
-                        <img src="{{ asset('img/money-bag.png')}}" alt="Add Fund" />Add Fund </a>
+                        <img src="{{ asset('img/money-bag.png') }}" alt="Add Fund" />Add Fund </a>
                 </li>
-                <li class="{{ Request::routeIs('fund') ? 'active':'' }}">
+                <li class="{{ Request::routeIs('fund') ? 'active' : '' }}">
                     <a href="{{ route('fund') }}" class="sidebar-link">
-                        <img src="{{ asset('img/fund.png')}}" alt="Fund History" />Fund History </a>
+                        <img src="{{ asset('img/fund.png') }}" alt="Fund History" />Fund History </a>
                 </li>
-                <li class="{{ Request::routeIs('money-transfer') ? 'active':'' }}">
+                <li class="{{ Request::routeIs('money-transfer') ? 'active' : '' }}">
                     <a href="{{ route('money-transfer') }}" class="sidebar-link">
-                        <img src="{{ asset('img/money-transfer.png')}}" alt="transfer" />transfer </a>
+                        <img src="{{ asset('img/money-transfer.png') }}" alt="transfer" />transfer </a>
                 </li>
-                <li class="{{ Request::routeIs('transaction') ? 'active':'' }}">
+                <li class="{{ Request::routeIs('transaction') ? 'active' : '' }}">
                     <a href="{{ route('transaction') }}" class="sidebar-link">
-                        <img src="{{ asset('img/transaction.png')}}" alt="transaction" />transaction </a>
+                        <img src="{{ asset('img/transaction.png') }}" alt="transaction" />transaction </a>
                 </li>
-                <li class="{{ Request::routeIs('payout') ? 'active':'' }}">
+                <li class="{{ Request::routeIs('payout') ? 'active' : '' }}">
                     <a href="{{ route('payout') }}" class="sidebar-link">
-                        <img src="{{ asset('img/payout.png')}}" alt="payout" />payout </a>
+                        <img src="{{ asset('img/payout.png') }}" alt="payout" />payout </a>
                 </li>
-                <li class="{{ Request::routeIs('payout-history') ? 'active':'' }}">
+                <li class="{{ Request::routeIs('payout-history') ? 'active' : '' }}">
                     <a href="{{ route('payout-history') }}" class="sidebar-link">
-                        <img src="{{ asset('img/pay-history.png')}}" alt="payout history" />payout history </a>
+                        <img src="{{ asset('img/pay-history.png') }}" alt="payout history" />payout history </a>
                 </li>
-                <li class="{{ Request::routeIs('referral') ? 'active':'' }}">
+                <li class="{{ Request::routeIs('referral') ? 'active' : '' }}">
                     <a href="{{ route('referral') }}" class="sidebar-link">
-                        <img src="{{ asset('img/refferal.png')}}" alt="my referral" />my referral </a>
+                        <img src="{{ asset('img/refferal.png') }}" alt="my referral" />my referral </a>
                 </li>
-                <li class="{{ Request::routeIs('referral-bonus') ? 'active':'' }}">
+                <li class="{{ Request::routeIs('referral-bonus') ? 'active' : '' }}">
                     <a href="{{ route('referral-bonus') }}" class="sidebar-link">
-                        <img src="{{ asset('img/bonus.png')}}" alt="referral bonus" />referral bonus </a>
+                        <img src="{{ asset('img/bonus.png') }}" alt="referral bonus" />referral bonus </a>
                 </li>
-                <li class="{{ Request::routeIs('profile') ? 'active':'' }}">
+                <li class="{{ Request::routeIs('profile') ? 'active' : '' }}">
                     <a href="{{ route('profile') }}" class="sidebar-link">
-                        <img src="{{ asset('img/setting.png')}}" alt="profile settings" />profile settings </a>
+                        <img src="{{ asset('img/setting.png') }}" alt="profile settings" />profile settings </a>
                 </li>
                 {{-- <li class="{{ Request::routeIs('ticket') ? 'active':'' }}">
                     <a href="{{ route('ticket') }}" class="sidebar-link">
@@ -120,17 +120,17 @@
                 <nav class="navbar navbar-expand-lg fixed-top">
                     <div class="container-fluid">
                         <a class="navbar-brand golden-text" href="https://income-gap.com">
-                            <img src="{{ asset('img/logo1.png')}}" alt="Income Gap">
+                            <img src="{{ asset('img/logo1.png') }}" alt="Income Gap">
                         </a>
                         <button type="button" id="sidebarCollapse" class="sidebar-toggler p-0">
-                            <img src="{{ asset('img/hamburger.png')}}" alt="hamburger image" />
+                            <img src="{{ asset('img/hamburger.png') }}" alt="hamburger image" />
                         </button>
 
                         <span class="navbar-text" id="pushNotificationArea">
                             <!---- notification panel ---->
                             <div class="notification-panel push-notification">
                                 <button class="dropdown-toggle">
-                                    <img src="{{ asset('img/notification.png')}}" alt="notification" />
+                                    <img src="{{ asset('img/notification.png') }}" alt="notification" />
                                     <span class="badge"></span>
                                 </button>
                                 <ul class="notification-dropdown">
@@ -140,7 +140,7 @@
                                             <a class="dropdown-item" href="javascript:void(0)">
                                                 <i class="fas fa-bell"></i>
                                                 <div>
-                                                    <h4 class="golden-text" >
+                                                    <h4 class="golden-text">
                                                     </h4>
                                                     <p></p>
                                                 </div>
@@ -162,24 +162,24 @@
                             <!---- user panel ---->
                             <div class="notification-panel user-panel">
                                 <button class="dropdown-toggle">
-                                    <img src="{{ asset('img/default.png')}}" class="user-image" alt="user img" />
+                                    <img src="{{ asset('img/default.png') }}" class="user-image" alt="user img" />
                                 </button>
                                 <ul class="notification-dropdown user-dropdown">
                                     <li>
                                         <a class="dropdown-item" href="dashboard">
-                                            <img src="{{ asset('img/layout.png')}}" alt="Dashboard" />
+                                            <img src="{{ asset('img/layout.png') }}" alt="Dashboard" />
                                             <span class="golden-text">Dashboard</span>
                                         </a>
                                     </li>
                                     <li>
                                         <a class="dropdown-item" href="profile">
-                                            <img src="{{ asset('img/profile.png')}}" alt="My Profile" />
+                                            <img src="{{ asset('img/profile.png') }}" alt="My Profile" />
                                             <span class="golden-text">My Profile</span>
                                         </a>
                                     </li>
                                     <li>
                                         <a class="dropdown-item" href="twostep-security">
-                                            <img src="{{ asset('img/padlock.png')}}" alt="2FA Security" />
+                                            <img src="{{ asset('img/padlock.png') }}" alt="2FA Security" />
                                             <span class="golden-text">2FA Security</span>
                                         </a>
                                     </li>
@@ -187,7 +187,7 @@
                                         <a class="dropdown-item" href="https://income-gap.com/logout"
                                             onclick="event.preventDefault();
                                     document.getElementById('logout-form').submit();">
-                                            <img src="{{ asset('img/log-out.png')}}" alt="Logout" />
+                                            <img src="{{ asset('img/log-out.png') }}" alt="Logout" />
                                             <span class="golden-text">Logout</span>
                                         </a>
                                         <form id="logout-form" action="https://income-gap.com/logout" method="POST"
@@ -203,7 +203,7 @@
                 </nav>
 
                 <!------------- others main dashboard body content ------------>
-{{-- 
+                {{-- 
                 <!---- other balances ----->
                 <section class="statistic-section mt-5 pt-5 pb-0">
                     <div class="container-fluid">
@@ -438,7 +438,7 @@
 
     <!-- scroll top icon -->
     <a href="#" class="scroll-top">
-        <img src="{{ asset('img/up-arrow2.png')}}" alt="scroll to top" />
+        <img src="{{ asset('img/up-arrow2.png') }}" alt="scroll to top" />
     </a>
 
     <!-- start preloader -->
@@ -467,7 +467,7 @@
     <script src="{{ asset('js/plugins.js') }}"></script>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/js/toastr.min.js"></script>
-    
+
     <script>
         'use strict';
         let pushNotificationArea = new Vue({
@@ -596,7 +596,7 @@
             },
             yaxis: {
                 title: {
-                    text: "{{ Request::routeIs('dashboard') ? 'active':'' }}"
+                    text: "{{ Request::routeIs('dashboard') ? 'active' : '' }}"
                 }
             },
             fill: {
@@ -606,7 +606,7 @@
                 colors: ['#000'],
                 y: {
                     formatter: function(val) {
-                        return "$" + val + "{{ Request::routeIs('dashboard') ? 'active':'' }}"
+                        return "$" + val + "{{ Request::routeIs('dashboard') ? 'active' : '' }}"
                     }
                 }
             }
@@ -625,15 +625,15 @@
         }
     </script>
 
-@livewireScripts
-<script>
-    window.addEventListener('alert', event => {
-    toastr[event.detail.type](event.detail.message,
-    event.detail.title ?? ''), toastr.options = {
-    "closeButton": true,
-    "progressBar": true,
-    }
-    });
+    @livewireScripts
+    <script>
+        window.addEventListener('alert', event => {
+            toastr[event.detail.type](event.detail.message,
+                event.detail.title ?? ''), toastr.options = {
+                "closeButton": true,
+                "progressBar": true,
+            }
+        });
     </script>
 </body>
 

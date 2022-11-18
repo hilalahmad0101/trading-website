@@ -37,7 +37,7 @@
                                     </div>
                                     <input type="text" wire:model.lazy="email" class="form-control"
                                         placeholder="Email " />
-                                    @error('username')
+                                    @error('email')
                                         <span class="text-danger">{{ $message }}</span>
                                     @enderror
                                 </div>
