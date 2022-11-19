@@ -6,6 +6,12 @@ use App\Http\Livewire\Admin\Blog\AddBlog;
 use App\Http\Livewire\Admin\Blog\Blog as BlogBlog;
 use App\Http\Livewire\Admin\Blog\UpdateBlog;
 use App\Http\Livewire\Admin\Dashboard as AdminDashboard;
+use App\Http\Livewire\Admin\Faq\AddFaq;
+use App\Http\Livewire\Admin\Faq\Faq as FaqFaq;
+use App\Http\Livewire\Admin\Faq\UpdateFaq;
+use App\Http\Livewire\Admin\Invest\AddInvest;
+use App\Http\Livewire\Admin\Invest\Invest;
+use App\Http\Livewire\Admin\Invest\UpdateInvest;
 use App\Http\Livewire\Blog;
 use App\Http\Livewire\Contact;
 use App\Http\Livewire\Dashboard;
@@ -43,7 +49,7 @@ Route::middleware(['guest'])->group(function () {
 
 
 Route::middleware(['auth'])->group(function () {
-    Route::prefix('user')->group(function(){
+    Route::prefix('user')->group(function () {
         Route::get('/dashboard', Dashboard::class)->name('dashboard');
         Route::get('/fund', Fund::class)->name('fund');
         Route::get('/invest-history', InvestHistory::class)->name('invest-history');
@@ -64,14 +70,25 @@ Route::middleware(['auth'])->group(function () {
 // Admin routes
 
 
-Route::prefix('admin')->group(function(){
-    Route::get('/login',AuthLogin::class)->name('admin.login');
+Route::prefix('admin')->group(function () {
+    Route::get('/login', AuthLogin::class)->name('admin.login');
 });
 
 
-Route::prefix('admin')->group(function(){
-    Route::get('/dashboard',AdminDashboard::class)->name('admin.dashboard');
-    Route::get('/post',BlogBlog::class)->name('admin.dashboard');
-    Route::get('/add/post',AddBlog::class)->name('admin.add.blog');
-    Route::get('/update/post/{id}',UpdateBlog::class)->name('admin.update.blog');
+Route::prefix('admin')->group(function () {
+    Route::get('/dashboard', AdminDashboard::class)->name('admin.dashboard');
+    Route::get('/post', BlogBlog::class)->name('admin.post');
+    Route::get('/add/post', AddBlog::class)->name('admin.add.blog');
+    Route::get('/update/post/{id}', UpdateBlog::class)->name('admin.update.blog');
+
+
+    // faq
+    Route::get('/faq', FaqFaq::class)->name('admin.faq');
+    Route::get('/add/faq', AddFaq::class)->name('admin.add.faq');
+    Route::get('/update/faq/{id}', UpdateFaq::class)->name('admin.update.faq');
+
+    // Invest
+    Route::get('/invest', Invest::class)->name('admin.invest');
+    Route::get('/add/invest', AddInvest::class)->name('admin.add.invest');
+    Route::get('/update/invest/{id}', UpdateInvest::class)->name('admin.update.invest');
 });

@@ -11,7 +11,8 @@ class Fund extends Component
     use WithPagination;
     public function render()
     {
-        $funds=ModelsFund::orderBy('created_at','DESC')->paginate(10);
+        $funds=ModelsFund::orderBy('created_at','DESC')->where('status','!=',0)->paginate(10);
         return view('livewire.fund.fund',compact('funds'))->layout('layout.app');
     }
 }
+    

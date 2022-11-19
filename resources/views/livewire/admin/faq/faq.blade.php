@@ -1,12 +1,12 @@
 <div>
-    <x-slot name='title'>Post</x-slot>
+    <x-slot name='title'>Faq</x-slot>
     <div class="container-fluid">
         <div class="container">
             <div class="card">
                 <div class="card-header">
                     <div class="d-flex justify-content-between align-items-center">
-                        <h4>Posts ( 4 )</h4>
-                        <a href="{{ route('admin.add.blog') }}" class="btn btn-success">New</a>
+                        <h4>Faq ( 4 )</h4>
+                        <a href="{{ route('admin.add.faq') }}" class="btn btn-success">New</a>
                     </div>
                 </div>
                 <div class="card-body">
@@ -22,25 +22,24 @@
                                                 <tr role="row">
                                                     <th>#</th>
                                                     <th>Title</th>
-                                                    <th>Image</th>
+                                                    <th>content</th>
                                                     <th>Date and Time</th>
                                                     <th>Action</th>
                                                 </tr>
                                             </thead>
                                             <tbody>
-                                                @forelse ($posts as $post)
+                                                @forelse ($faqs as $faq)
                                                     <tr class="odd">
-                                                        <td class="sorting_1">{{ $post->id }}</td>
-                                                        <td>{{ $post->title }}</td>
-                                                        <td><img src="{{ asset('storage') }}/{{ $post->image }}"
-                                                                width="48" alt=""></td>
-                                                        <td>{{ date('Y-m-d H:i:s A', strtotime($post->created_at)) }}
+                                                        <td class="sorting_1">{{ $faq->id }}</td>
+                                                        <td>{{ $faq->title }}</td>
+                                                        <td>{{ $faq->content }}</td>
+                                                        <td>{{ date('Y-m-d H:i:s A', strtotime($faq->created_at)) }}
                                                         </td>
                                                         <td>
-                                                            <a href="{{ route('admin.update.blog', ['id' => $post->id]) }}"
+                                                            <a href="{{ route('admin.update.blog', ['id' => $faq->id]) }}"
                                                                 class="btn btn-sm btn-success">Edit</a>
                                                             <a href=""
-                                                                wire:click.prevent='delete({{ $post->id }})'
+                                                                wire:click.prevent='delete({{ $faq->id }})'
                                                                 class="btn btn-sm btn-danger">Delete</a>
                                                         </td>
                                                     </tr>

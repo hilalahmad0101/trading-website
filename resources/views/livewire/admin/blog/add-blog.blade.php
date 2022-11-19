@@ -5,7 +5,7 @@
             <div class="card">
                 <div class="card-header">
                     <div class="d-flex justify-content-between align-items-center">
-                        <a href="" class="btn btn-success">Back</a>
+                        <a href="{{ route('admin.post') }}" class="btn btn-success">Back</a>
                     </div>
                 </div>
                 <div class="card-body">

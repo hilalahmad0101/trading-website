@@ -9,15 +9,18 @@ class Blog extends Component
 {
     public function render()
     {
-        $posts=Post::latest()->get();
-        return view('livewire.admin.blog.blog',compact('posts'))->layout('layout.admin-app');
+        $posts = Post::latest()->get();
+        return view('livewire.admin.blog.blog', compact('posts'))->layout('layout.admin-app');
     }
 
     public function delete($id)
     {
-        $post=Post::findOrFail($id)->delete();
-        if($post){
-            
+        $post = Post::findOrFail($id)->delete();
+        if ($post) {
+            $this->dispatchBrowserEvent(
+                'alert',
+                ['type' => 'success',  'message' => 'Post Delete Successfully']
+            );
         }
     }
 }
